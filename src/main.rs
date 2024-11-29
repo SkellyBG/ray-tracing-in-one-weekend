@@ -1,7 +1,9 @@
 const IMAGE_WIDTH: usize = 256;
 const IMAGE_HEIGHT: usize = 256;
 
-mod vec3;
+mod structs;
+
+use structs::color::Color;
 
 fn main() {
     print!("P3\n{} {}\n255\n", IMAGE_WIDTH, IMAGE_HEIGHT);
@@ -12,11 +14,9 @@ fn main() {
             let g = j as f64 / (IMAGE_HEIGHT - 1) as f64;
             let b = 0.0_f64;
 
-            let ir = (255.999 * r).floor() as i32;
-            let ig = (255.999 * g).floor() as i32;
-            let ib = (255.999 * b).floor() as i32;
+            let pixel_color = Color::new(r, g, b);
 
-            println!("{} {} {}", ir, ig, ib);
+            pixel_color.write_color();
         }
     }
 
