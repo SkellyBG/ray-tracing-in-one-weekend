@@ -9,7 +9,7 @@ pub struct Vec3 {
 }
 
 impl Vec3 {
-    fn new() -> Self {
+    pub fn new() -> Self {
         Self {
             x: 0.0,
             y: 0.0,
@@ -37,7 +37,7 @@ impl Vec3 {
         }
     }
 
-    fn unit_vector(&self) -> Self {
+    pub fn unit_vector(&self) -> Self {
         self.div(self.length())
     }
 }

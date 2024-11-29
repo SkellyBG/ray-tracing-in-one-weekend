@@ -1,4 +1,4 @@
 pub mod color;
-mod point3;
+pub mod point3;
 pub mod ray;
-mod vec3;
+pub mod vec3;
