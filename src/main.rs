@@ -1,6 +1,8 @@
 const IMAGE_WIDTH: usize = 256;
 const IMAGE_HEIGHT: usize = 256;
 
+mod vec3;
+
 fn main() {
     print!("P3\n{} {}\n255\n", IMAGE_WIDTH, IMAGE_HEIGHT);
     for j in 0..IMAGE_HEIGHT {
