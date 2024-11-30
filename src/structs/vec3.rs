@@ -71,7 +71,7 @@ impl Add for Vec3 {
         Self {
             x: self.x + rhs.x,
             y: self.y + rhs.y,
-            z: self.z + rhs.x,
+            z: self.z + rhs.z,
         }
     }
 }
@@ -124,6 +124,6 @@ impl DivAssign<f64> for Vec3 {
 
 impl fmt::Display for Vec3 {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        write!(f, "{} {} {}", self.x, self.y, self.x)
+        write!(f, "{} {} {}", self.x, self.y, self.z)
     }
 }
