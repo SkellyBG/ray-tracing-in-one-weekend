@@ -24,7 +24,7 @@ fn ray_color(ray: Ray) -> Color {
 
     let a = 0.5 * (unit_direction.y + 1.0);
 
-    Color::new(1.0, 1.0, 1.0) * (1.0 - a) + Color::new(0.5, 0.7, 1.0) * a
+    Color::from((1.0, 1.0, 1.0)) * (1.0 - a) + Color::from((0.5, 0.7, 1.0)) * a
 }
 
 fn main() {
